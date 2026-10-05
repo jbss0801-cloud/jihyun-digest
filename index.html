@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>지현이를 위한 분장·뷰티 주간 다이제스트</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700;800&family=Noto+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: 분장실 거울 앞 노트 — 상단 고정 챕터 탭, 한 줄 컬럼 본문, 챕터마다 직접 그린 도해가 붙는 매거진 */
+:root{
+  --bg:#F2F0F3;--paper:#FBFAFC;--ink:#231C29;--muted:#6B6372;--line:#DCD6E0;
+  --lip:#B4233C;--lip-soft:#F6E1E5;
+  --ok:#2F6B53;--ok-bg:#E1EFE8;--press:#2C5B8A;--press-bg:#E0EAF4;
+  --single:#8A6A12;--single-bg:#F5EDD4;--conflict:#A1301F;--conflict-bg:#F7E0DB;
+  --mine:#5E4B8B;--mine-bg:#E9E4F4;
+  --f-display:"Nanum Myeongjo","AppleMyungjo",serif;
+  --f-body:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#17131B;--paper:#1F1A24;--ink:#EEE8F2;--muted:#A79FB0;--line:#3A3242;
+  --lip:#EE6B80;--lip-soft:#3A1F27;
+  --ok:#7CC9A4;--ok-bg:#1D3329;--press:#8DB8E6;--press-bg:#1C2A3A;
+  --single:#E3C46B;--single-bg:#352C14;--conflict:#F08B78;--conflict-bg:#3B1F1A;
+  --mine:#BBA9EC;--mine-bg:#2A2340;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#17131B;--paper:#1F1A24;--ink:#EEE8F2;--muted:#A79FB0;--line:#3A3242;
+  --lip:#EE6B80;--lip-soft:#3A1F27;
+  --ok:#7CC9A4;--ok-bg:#1D3329;--press:#8DB8E6;--press-bg:#1C2A3A;
+  --single:#E3C46B;--single-bg:#352C14;--conflict:#F08B78;--conflict-bg:#3B1F1A;
+  --mine:#BBA9EC;--mine-bg:#2A2340;color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.75;padding:0 16px}
+.wrap{max-width:760px;margin:0 auto;padding-block:0 64px}
+a{color:var(--lip);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--lip);outline-offset:2px;border-radius:4px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;line-height:1.3;margin:0}
+.mono{font-family:var(--f-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+
+.cover{padding-block:40px 28px;display:grid;gap:14px}
+.cover .issue{display:flex;gap:12px;flex-wrap:wrap;align-items:baseline}
+.cover h1{font-size:clamp(30px,7vw,46px);font-weight:800;letter-spacing:-.01em}
+.cover h1 em{font-style:normal;color:var(--lip)}
+.cover p{margin:0;color:var(--muted);max-width:60ch}
+
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);margin:0 -16px;padding:10px 16px}
+.tabs ol{list-style:none;margin:0 auto;padding:0;max-width:760px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.tabs a{display:block;white-space:nowrap;text-decoration:none;color:var(--muted);font-size:14px;font-weight:500;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--paper)}
+.tabs a b{font-family:var(--f-mono);font-weight:500;font-size:11px;margin-right:6px;color:var(--lip)}
+.tabs a.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.tabs a.on b{color:var(--lip-soft)}
+
+section{padding-top:44px;scroll-margin-top:64px}
+.ch-head{display:grid;gap:6px;margin-bottom:18px}
+.ch-head h2{font-size:clamp(24px,5vw,32px);font-weight:800}
+.lead{font-size:17px;margin:0 0 18px}
+p{margin:0 0 14px}
+
+.v{display:inline-flex;align-items:center;gap:4px;font-size:11.5px;font-weight:700;padding:1px 8px;border-radius:999px;white-space:nowrap;vertical-align:2px;font-style:normal}
+.v::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.v-ok{color:var(--ok);background:var(--ok-bg)}
+.v-press{color:var(--press);background:var(--press-bg)}
+.v-single{color:var(--single);background:var(--single-bg)}
+.v-conflict{color:var(--conflict);background:var(--conflict-bg)}
+.v-mine{color:var(--mine);background:var(--mine-bg)}
+.legend{display:flex;flex-wrap:wrap;gap:8px 10px;padding:14px;border:1px dashed var(--line);border-radius:10px;font-size:13px;color:var(--muted)}
+.legend span{display:flex;gap:6px;align-items:center}
+
+.tldr{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.tldr li{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.tldr .tag{font-family:var(--f-mono);font-size:11px;color:var(--lip);padding-top:4px;min-width:44px}
+
+.products{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.prod{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px;display:grid;gap:8px;align-content:start;min-width:0}
+.prod .top{display:flex;gap:12px;align-items:center}
+.prod svg{flex:none}
+.prod h3{font-family:var(--f-body);font-size:15px;font-weight:700;line-height:1.4}
+.prod .cat{font-size:12px;color:var(--muted)}
+.prod p{font-size:14px;margin:0}
+.prod .src{font-size:12px}
+
+/* 명작 해부 */
+.work{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:22px;display:grid;gap:14px;min-width:0}
+.work .kicker{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.work .num{font-family:var(--f-mono);font-size:11px;color:var(--paper);background:var(--lip);padding:2px 8px;border-radius:4px}
+.work h3{font-size:24px;font-weight:800}
+.work h3 small{font-family:var(--f-body);font-size:14px;font-weight:400;color:var(--muted);margin-left:6px}
+.work h4{font-size:15px;margin:4px 0 0;font-weight:700}
+.meta{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px}
+.stat{border:1px solid var(--line);border-radius:10px;padding:10px 12px;display:grid;gap:2px}
+.stat b{font-family:var(--f-display);font-size:24px;font-weight:800;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat span{font-size:12.5px;color:var(--muted);line-height:1.45}
+.fig{border:1px solid var(--line);border-radius:12px;padding:14px;background:var(--bg);overflow-x:auto}
+.fig svg{display:block;width:100%;height:auto}
+.fig figcaption{font-size:12.5px;color:var(--muted);margin-top:8px;line-height:1.5}
+figure{margin:0}
+.why{margin:0;padding:0;list-style:none;display:grid;gap:10px;counter-reset:w}
+.why li{display:grid;grid-template-columns:28px 1fr;gap:10px;font-size:15px}
+.why li::before{counter-increment:w;content:counter(w);font-family:var(--f-mono);font-size:12px;width:24px;height:24px;border-radius:50%;border:1px solid var(--lip);color:var(--lip);display:grid;place-items:center;margin-top:3px}
+.apply{background:var(--lip-soft);border-radius:12px;padding:14px 16px;font-size:14.5px}
+.apply b{display:block;margin-bottom:4px}
+.refs{font-size:13.5px;display:flex;flex-wrap:wrap;gap:6px 14px}
+.watch{margin:0;padding-left:20px;display:grid;gap:6px}
+.note{font-size:13.5px;color:var(--muted);border-left:3px solid var(--lip);padding:4px 0 4px 12px;margin:0}
+
+.kelvin{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px;overflow-x:auto}
+.kelvin svg{display:block;min-width:520px;width:100%;height:auto}
+.tips{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:10px}
+.tips li{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:15px}
+.tips b{display:block;font-size:15px;margin-bottom:2px}
+
+.todo{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.todo label{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px;cursor:pointer}
+.todo input{width:20px;height:20px;accent-color:var(--lip)}
+.todo .min{font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+.todo input:checked + span{text-decoration:line-through;color:var(--muted)}
+
+.grid-table{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:520px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;color:var(--muted);font-weight:500;background:var(--bg)}
+tr:last-child td{border-bottom:0}
+.sources{font-size:14px;padding-left:20px;display:grid;gap:4px}
+
+.archive{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.archive a,.archive .cur{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;text-decoration:none;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+.archive .no{font-family:var(--f-mono);font-size:12px;color:var(--lip)}
+.archive .d{font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.archive .cur{border-style:dashed}
+footer{margin-top:40px;font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+
+<div class="wrap">
+<header class="cover">
+  <div class="issue"><span class="mono">No.01 · 2026년 10월 2주차</span><span class="mono">10월 5일 발행</span></div>
+  <h1>지현이를 위한<br><em>분장·뷰티</em> 주간 다이제스트</h1>
+  <p>이번 호 명작 해부 주제는 'K-특수분장의 기준'이에요. 배우를 실존 인물 모티브 캐릭터로 바꾼 영화, K-좀비를 처음 만든 영화, 수천 명 좀비를 계급별로 나눈 시리즈예요. 앞으로 명작 해부는 한국 영화·드라마만 다뤄요.</p>
+</header>
+
+<nav class="tabs" aria-label="챕터">
+  <ol>
+    <li><a href="#summary"><b>00</b>요약</a></li>
+    <li><a href="#products"><b>01</b>신상·업계</a></li>
+    <li><a href="#classics"><b>02</b>명작 해부</a></li>
+    <li><a href="#camera"><b>03</b>카메라 앞</a></li>
+    <li><a href="#homework"><b>04</b>숙제</a></li>
+    <li><a href="#verify"><b>05</b>검증·출처</a></li>
+    <!--ARCHIVE-TAB--><li><a href="#archive"><b>06</b>지난 호</a></li><!--/ARCHIVE-TAB-->
+  </ol>
+</nav>
+
+<section id="summary">
+  <div class="ch-head"><span class="mono">00 · 3줄 요약</span><h2>바쁘면 이것만 보세요</h2></div>
+  <ul class="tldr">
+    <li><span class="tag">명작</span><div><b>서울의 봄은 초상화가 아니라 캐리커처로 갔어요.</b> 실존 인물을 복제하지 않고 두상·이마 주름·코·눈꼬리 네 군데를 바꿔 인상을 만들었어요.</div></li>
+    <li><span class="tag">명작</span><div><b>부산행은 서양 좀비를 한국 얼굴에 맞게 다시 설계했어요.</b> 평평한 얼굴엔 실리콘 패치로 입체를 보태고, 감염은 혈관으로 번지게 했어요.</div></li>
+    <li><span class="tag">신상</span><div><b>10월 신상은 콜라보 쿠션이 많은데, 대부분 패키지만 바뀐 한정판이에요.</b> 키트에 넣을 만한 건 새 제형인 리퀴드 블러셔 정도예요.</div></li>
+  </ul>
+  <div class="legend" style="margin-top:16px" aria-label="검증 표시 안내">
+    <span><i class="v v-ok">공식 확인</i> 원문·공식 기록 확인</span>
+    <span><i class="v v-press">보도 확인</i> 언론 2곳 이상 일치</span>
+    <span><i class="v v-single">단일 출처</i> 한 곳에서만 확인</span>
+    <span><i class="v v-conflict">출처 충돌</i> 출처끼리 다름</span>
+    <span><i class="v v-mine">해석</i> 사실이 아니라 분석 의견</span>
+  </div>
+</section>
+
+<section id="products">
+  <div class="ch-head"><span class="mono">01 · 제품·성분·업계</span><h2>10월 신상, 현장에서 쓸 만한가</h2></div>
+  <p class="lead">10월 올리브영은 '올영픽' 한정 기획이 대부분이에요. 내용물은 그대로고 패키지만 바뀐 게 많으니, 새 제형인지 먼저 보세요.</p>
+  <div class="products">
+    <article class="prod">
+      <div class="top"><svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="var(--lip-soft)" stroke="var(--ink)" stroke-width="1.5"/><path d="M12 22c4-6 16-6 20 0" fill="none" stroke="var(--lip)" stroke-width="3" stroke-linecap="round"/></svg>
+        <div><h3>어뮤즈 듀 세럼 리퀴드 블러쉬</h3><div class="cat">리퀴드 블러셔 · 신제품 7색</div></div></div>
+      <p>세럼 제형이라 쿠션 베이스 위에서 밀리는지가 관건이에요. 수정 메이크업 때 손가락으로 두드려 올라가면 키트 후보예요.</p>
+      <div class="src"><i class="v v-ok">공식 확인</i> <a href="https://m.oliveyoung.co.kr/m/mtn?menu=sale" target="_blank" rel="noopener">올리브영 세일관</a></div>
+    </article>
+    <article class="prod">
+      <div class="top"><svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="var(--bg)" stroke="var(--ink)" stroke-width="1.5"/><circle cx="22" cy="22" r="11" fill="var(--line)" stroke="var(--ink)" stroke-width="1"/></svg>
+        <div><h3>라네즈×마뗑킴 네오쿠션 뮤이</h3><div class="cat">매트 쿠션 · 한정 에디션</div></div></div>
+      <p>뮤이는 매트 라인이에요. 조명 아래 오래 서 있는 배우 중 유분이 빨리 올라오는 사람용으로, 기존 뮤이와 같은 걸로 보면 돼요.</p>
+      <div class="src"><i class="v v-ok">공식 확인</i> <a href="https://www.oliveyoung.co.kr/store/main/main.do" target="_blank" rel="noopener">올리브영 메인</a></div>
+    </article>
+    <article class="prod">
+      <div class="top"><svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="var(--bg)" stroke="var(--ink)" stroke-width="1.5"/><circle cx="22" cy="22" r="11" fill="var(--single-bg)" stroke="var(--ink)" stroke-width="1"/></svg>
+        <div><h3>클리오 킬커버 파운웨어 쿠션 풍년다방 에디션</h3><div class="cat">커버 쿠션 · 콜라보 한정</div></div></div>
+      <p>블로그 정리글 한 곳에서만 확인돼요. 매장에서 기존 킬커버랑 내용물이 같은지 보고, 같으면 패스해도 돼요.</p>
+      <div class="src"><i class="v v-single">단일 출처</i> <a href="https://techjeju.com/%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81-10%EC%9B%94-%EC%84%B8%EC%9D%BC-%EA%B8%B0%EA%B0%84%C2%B7%EB%82%A0%EC%A7%9C%EF%BD%9C%EC%BD%9C%EB%9D%BC%EB%B3%B4%C2%B7%EC%98%AC%EC%98%81%ED%94%BD%C2%B7%EB%B9%85/" target="_blank" rel="noopener">techjeju 정리글</a></div>
+    </article>
+    <article class="prod">
+      <div class="top"><svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><rect x="5" y="9" width="34" height="26" rx="4" fill="var(--bg)" stroke="var(--ink)" stroke-width="1.5"/><g fill="var(--muted)"><rect x="10" y="14" width="6" height="6" rx="1"/><rect x="19" y="14" width="6" height="6" rx="1" opacity=".7"/><rect x="28" y="14" width="6" height="6" rx="1" opacity=".45"/><rect x="10" y="23" width="6" height="6" rx="1" opacity=".55"/><rect x="19" y="23" width="6" height="6" rx="1" opacity=".85"/><rect x="28" y="23" width="6" height="6" rx="1" opacity=".3"/></g></svg>
+        <div><h3>데이지크 섀도우팔레트 레오파드</h3><div class="cat">아이 팔레트 · 27색</div></div></div>
+      <p>브라운 계열이 넓으면 남자 배우 음영이나 눈두덩 그림자 정리용으로 쓸 수 있어요. 펄 비중은 테스터로 확인하세요.</p>
+      <div class="src"><i class="v v-ok">공식 확인</i> <a href="https://m.oliveyoung.co.kr/m/mtn?menu=sale" target="_blank" rel="noopener">올리브영 세일관</a></div>
+    </article>
+    <article class="prod">
+      <div class="top"><svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><rect x="10" y="20" width="10" height="18" rx="2" fill="var(--bg)" stroke="var(--ink)" stroke-width="1.5"/><path d="M11 20v-8l8-4v12" fill="var(--lip)"/><rect x="24" y="20" width="10" height="18" rx="2" fill="var(--bg)" stroke="var(--ink)" stroke-width="1.5"/><path d="M25 20v-6l8-3v9" fill="var(--lip)" opacity=".55"/></svg>
+        <div><h3>라카 퍼펙트 트윈 립</h3><div class="cat">듀얼 립 · 12색</div></div></div>
+      <p>한 통에 두 가지가 들어 있어서 컷 사이 립 톤 맞추기가 편한지 볼 만해요. 지속력은 직접 테스트가 필요해요.</p>
+      <div class="src"><i class="v v-ok">공식 확인</i> <a href="https://m.oliveyoung.co.kr/m/mtn?menu=sale" target="_blank" rel="noopener">올리브영 세일관</a></div>
+    </article>
+    <article class="prod">
+      <div class="top"><svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="var(--bg)" stroke="var(--ink)" stroke-width="1.5"/><circle cx="22" cy="22" r="12" fill="var(--lip)" opacity=".35"/></svg>
+        <div><h3>투슬래시포 올 오버 페이스 블러쉬</h3><div class="cat">파우더 블러셔 · 신제품</div></div></div>
+      <p>얼굴 전체에 쓰는 콘셉트예요. 컨투어 대용으로 쓸 수 있는지, 카메라에서 붉게 뜨지 않는지 보세요.</p>
+      <div class="src"><i class="v v-ok">공식 확인</i> <a href="https://m.oliveyoung.co.kr/m/mtn?menu=sale" target="_blank" rel="noopener">올리브영 세일관</a></div>
+    </article>
+  </div>
+  <h3 style="font-size:19px;margin:28px 0 10px">업계 소식</h3>
+  <ul class="watch">
+    <li>올리브영이 9월 15일 앱에 모바일 피부 진단 서비스를 열었어요. 배우 피부 상태 기록용으로 쓸 만한지 한 번 해보세요. <i class="v v-ok">공식 확인</i></li>
+    <li>올리브영이 제약사 설계를 내세운 '어드밴스드 더마' 카테고리를 키우고 있어요. 촬영 전 진정용 신제품이 이쪽에서 계속 나올 것 같아요. <i class="v v-ok">공식 확인</i> <i class="v v-mine">해석</i></li>
+    <li>10월 대규모 올영세일 날짜는 아직 발표 전이에요. 키트 보충은 매달 25~27일 올영데이에 맞추는 게 현실적이에요. <i class="v v-single">단일 출처</i></li>
+  </ul>
+</section>
+
+<section id="classics">
+  <div class="ch-head"><span class="mono">02 · 명작 해부</span><h2>분장으로 인정받은 한국 작품 3편</h2></div>
+  <p class="lead">매주 분장이 잘된 걸로 유명하거나 작품성을 인정받은 한국 영화·드라마 3편을 골라, 왜 잘됐는지 뜯어봐요. 이번 세 편은 모두 특수분장팀 셀이 맡았어요. 같은 팀이 실존 인물, 현대 좀비, 사극 좀비를 어떻게 다르게 풀었는지 비교해 보면 재밌어요. 수치와 제작 과정은 인터뷰와 보도로 확인한 것만 썼어요.</p>
+  <p class="note">스틸 사진은 저작권 때문에 넣을 수 없어서, 설계 원리를 직접 그린 도해로 설명했어요. 실제 장면은 각 작품의 '더 보기' 기사에서 볼 수 있어요.</p>
+
+  <!-- 1 서울의 봄 -->
+  <article class="work" id="w-seoulspring">
+    <div class="kicker"><span class="num">변신</span><span class="mono">영화 · 2023</span></div>
+    <h3>서울의 봄<small>전두광 · 황정민</small></h3>
+    <div class="meta"><span>특수분장 황효균(테크니컬 아트스튜디오 셀)</span><span>천만 관객 흥행</span><i class="v v-press">보도 확인</i></div>
+    <p>황정민을 실존 인물을 모티브로 한 보안사령관 전두광으로 바꾼 작품이에요. 대머리와 이마 주름이 개봉 전부터 화제가 됐고, 배우 얼굴이 거의 안 보인다는 평까지 나왔어요. 한국에서 실존 인물 변신 분장을 이야기할 때 요즘 가장 먼저 나오는 사례예요.</p>
+    <div class="stats">
+      <div class="stat"><b>100시간+</b><span>촬영 기간 전체 특수분장 시간</span></div>
+      <div class="stat"><b>35개+</b><span>일회용 인조 피부 제작 수</span></div>
+      <div class="stat"><b>3~4시간</b><span>회당 분장 시간 (출처별로 다름)</span></div>
+      <div class="stat"><b>새벽 3시</b><span>오전 7시 촬영 호출에 맞춘 배우 기상 시간</span></div>
+    </div>
+    <figure class="fig">
+      <svg viewBox="0 0 560 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="전두광 특수분장 부위 도해: 두상 인조피부, 이마 주름, 콧방울 실리콘, 눈꼬리, 가발">
+        <g font-family="Noto Sans KR,sans-serif" font-size="12.5" fill="var(--ink)">
+          <ellipse cx="280" cy="140" rx="82" ry="102" fill="#E8C9AE" stroke="var(--ink)" stroke-width="1.5"/>
+          <path d="M200 120 Q204 40 280 36 Q356 40 360 120 Q330 108 280 106 Q230 108 200 120Z" fill="#EFD3BA" stroke="var(--lip)" stroke-width="2" stroke-dasharray="5 4"/>
+          <path d="M200 132 Q194 150 202 168 M360 132 Q366 150 358 168" stroke="#5A4A44" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <path d="M244 82 Q280 74 316 82 M240 92 Q280 84 320 92 M246 102 Q280 95 314 102" stroke="#B48B70" stroke-width="1.4" fill="none"/>
+          <path d="M242 126 Q256 118 270 126 M290 126 Q304 118 318 124" stroke="#3A2A28" stroke-width="2.4" fill="none"/>
+          <path d="M244 140 Q256 134 270 140 Q256 145 244 140Z M290 140 Q304 134 318 138 Q304 145 290 140Z" fill="#FBF8F6" stroke="#3A2A28" stroke-width="1.4"/>
+          <path d="M318 138 L326 133" stroke="var(--lip)" stroke-width="2"/>
+          <path d="M280 146 Q276 172 266 180 Q280 188 294 180 Q284 172 280 146" fill="#E3BC9E" stroke="#8A6A5A" stroke-width="1.2"/>
+          <ellipse cx="266" cy="181" rx="9" ry="6" fill="none" stroke="var(--lip)" stroke-width="2"/>
+          <ellipse cx="294" cy="181" rx="9" ry="6" fill="none" stroke="var(--lip)" stroke-width="2"/>
+          <path d="M256 206 Q280 214 304 206" stroke="#9A5A54" stroke-width="3" fill="none"/>
+          <g stroke="var(--muted)" stroke-width="1"><line x1="330" y1="50" x2="420" y2="40"/><line x1="318" y1="92" x2="420" y2="92"/><line x1="326" y1="133" x2="420" y2="140"/><line x1="303" y1="182" x2="420" y2="190"/><line x1="200" y1="150" x2="140" y2="150"/></g>
+          <text x="424" y="44">두상 본 + 인조 피부</text><text x="424" y="60" font-size="11" fill="var(--muted)">눈썹부터 정수리까지</text>
+          <text x="424" y="96">이마 주름</text><text x="424" y="112" font-size="11" fill="var(--muted)">위치·개수·살결 매칭</text>
+          <text x="424" y="144">눈꼬리 살짝 올림</text>
+          <text x="424" y="194">콧방울 실리콘</text><text x="424" y="210" font-size="11" fill="var(--muted)">코 평수 확대</text>
+          <text x="136" y="154" text-anchor="end">특수 모발 가발</text>
+        </g>
+      </svg>
+      <figcaption>부위별 작업 내용은 황효균 감독 인터뷰(YTN)에서 확인한 사실이에요. 그림은 위치를 보여주려고 그린 개념도예요. <i class="v v-ok">공식 확인</i> <i class="v v-mine">해석</i></figcaption>
+    </figure>
+    <h4>왜 잘됐나</h4>
+    <ol class="why">
+      <li><span><b>초상화가 아니라 캐리커처로 갔어요.</b> 황효균 감독은 실존 인물을 정확히 복제하지 않고, 특징을 살려 극 속 이미지를 만드는 쪽을 택했다고 했어요. 그래서 '닮았다'보다 '전두광 같다'는 반응이 나왔어요. <i class="v v-single">단일 출처</i></span></li>
+      <li><span><b>주름까지 설계했어요.</b> 이마 주름의 위치와 개수, 살결까지 맞췄어요. 대머리 분장이 티 나는 건 대부분 이마가 너무 매끈해서인데, 그 지점을 정면으로 해결했어요. <i class="v v-single">단일 출처</i></span></li>
+      <li><span><b>표정을 막지 않았어요.</b> 감독이 가장 중요하게 본 건 배우의 감정 표현을 방해하지 않는 거였어요. 피스를 크게 덮기보다 콧방울·눈꼬리처럼 작은 부위를 바꿔 인상을 바꿨어요. <i class="v v-single">단일 출처</i></span></li>
+      <li><span><b>피부는 매번 새로 썼어요.</b> 인조 피부 35개 이상을 일회용으로 만들었어요. 매 회차 가장자리가 새것이라 클로즈업에서도 경계가 깨끗했어요. <i class="v v-single">단일 출처</i></span></li>
+    </ol>
+    <p><i class="v v-conflict">출처 충돌</i> 회당 분장 시간이 황효균 감독 인터뷰에는 약 3시간, 황정민 배우 발언에는 기본 4시간으로 나와요. 배우는 대기·제거 시간까지 포함해 말했을 가능성이 있어요. <i class="v v-mine">해석</i></p>
+    <div class="apply"><b>지현 현장 적용</b>실존 인물이나 노역 분장을 맡으면 '똑같이'보다 '어떤 특징 두세 개를 과장할지'를 먼저 정하세요. 서울의 봄은 두상·이마 주름·코·눈꼬리 네 군데로 얼굴 전체 인상을 바꿨어요. 대머리캡을 쓸 때는 이마를 매끈하게 두지 말고 그 배역 나이에 맞는 주름을 그려 넣는 것만으로도 티가 훨씬 덜 나요. <i class="v v-mine">해석</i></div>
+    <div class="refs"><span class="mono">더 보기</span><a href="https://www.ytn.co.kr/_ln/0117_202312060801020260" target="_blank" rel="noopener">YTN: 전두광 특수분장 100시간</a><a href="https://www.ajunews.com/view/20231109171541323" target="_blank" rel="noopener">아주경제: 황정민 "준비만 4시간"</a></div>
+  </article>
+
+  <!-- 2 부산행 -->
+  <article class="work" id="w-busan">
+    <div class="kicker"><span class="num">감염</span><span class="mono">영화 · 2016</span></div>
+    <h3>부산행<small>Train to Busan</small></h3>
+    <div class="meta"><span>특수분장감독 곽태용(셀)</span><span>안무 전영</span><span>1,157만 관객, 좀비 영화 첫 천만</span><i class="v v-press">보도 확인</i></div>
+    <p>'K-좀비'라는 말을 만든 작품이에요. 서양 좀비를 그대로 가져오지 않고, 동양인 얼굴에 맞춘 좀비를 새로 설계했어요. 이후 킹덤을 비롯한 한국 좀비물의 기준이 됐다는 평가를 받아요.</p>
+    <figure class="fig">
+      <svg viewBox="0 0 560 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="감염 진행 3단계: 물림, 혈관 확산, 변이 완료">
+        <g font-family="Noto Sans KR,sans-serif" text-anchor="middle">
+          <g transform="translate(95 20)">
+            <ellipse cx="0" cy="62" rx="50" ry="62" fill="#E6C7AC" stroke="var(--ink)" stroke-width="1.3"/>
+            <circle cx="30" cy="100" r="7" fill="#8E2A2A"/>
+            <circle cx="-17" cy="52" r="6" fill="#FBF8F6" stroke="#3A2A28"/><circle cx="17" cy="52" r="6" fill="#FBF8F6" stroke="#3A2A28"/>
+            <circle cx="-17" cy="52" r="3" fill="#3A2A28"/><circle cx="17" cy="52" r="3" fill="#3A2A28"/>
+          </g>
+          <g transform="translate(280 20)">
+            <ellipse cx="0" cy="62" rx="50" ry="62" fill="#D2BBA8" stroke="var(--ink)" stroke-width="1.3"/>
+            <g stroke="#5E3A4A" stroke-width="1.6" fill="none"><path d="M30 100 q-6 -20 -2 -36 t-10 -28"/><path d="M30 100 q-20 -6 -30 -22"/><path d="M28 92 q10 -16 4 -34"/></g>
+            <circle cx="30" cy="100" r="7" fill="#7A2626"/>
+            <circle cx="-17" cy="52" r="6" fill="#F1ECE6" stroke="#3A2A28"/><circle cx="17" cy="52" r="6" fill="#F1ECE6" stroke="#3A2A28"/>
+            <circle cx="-17" cy="52" r="2" fill="#6A5A58"/><circle cx="17" cy="52" r="2" fill="#6A5A58"/>
+          </g>
+          <g transform="translate(465 20)">
+            <ellipse cx="0" cy="62" rx="50" ry="62" fill="#B3A396" stroke="var(--ink)" stroke-width="1.3"/>
+            <g stroke="#3E2432" stroke-width="2" fill="none"><path d="M30 100 q-6 -20 -2 -36 t-10 -28 t-14 -30"/><path d="M30 100 q-20 -6 -30 -22 t-20 -30"/><path d="M28 92 q10 -16 4 -34 t8 -30"/><path d="M-30 90 q-6 -24 4 -40"/></g>
+            <path d="M-28 30 q6 -6 12 0 M16 30 q6 -6 12 0" stroke="#3A2A28" stroke-width="1.6" fill="none"/>
+            <circle cx="-17" cy="52" r="6" fill="#E9E6DF" stroke="#3A2A28"/><circle cx="17" cy="52" r="6" fill="#E9E6DF" stroke="#3A2A28"/>
+            <path d="M-14 96 q14 10 28 0" stroke="#6E2A2A" stroke-width="3" fill="none"/>
+          </g>
+          <path d="M150 82 H225 M335 82 H410" stroke="var(--muted)" stroke-width="1.5"/>
+          <g font-size="13" fill="var(--ink)"><text x="95" y="168">① 물림</text><text x="280" y="168">② 혈관 타고 확산</text><text x="465" y="168">③ 변이 완료</text></g>
+          <g font-size="11.5" fill="var(--muted)"><text x="95" y="188">상처만, 피부는 정상</text><text x="280" y="188">물린 곳에서 혈관이 번짐</text><text x="465" y="188">실리콘 패치로 주름 과장</text></g>
+        </g>
+      </svg>
+      <figcaption>혈관을 따라 번지는 감염 표현과 실리콘 패치로 표정 주름을 강조한 기법은 보도로 확인했어요. 단계 구분과 색은 원리를 보여주는 예시예요. <i class="v v-press">보도 확인</i> <i class="v v-mine">해석</i></figcaption>
+    </figure>
+    <h4>왜 잘됐나</h4>
+    <ol class="why">
+      <li><span><b>동양인 얼굴에 맞췄어요.</b> 곽태용 감독은 동양인 얼굴이 서양인보다 평평해서 서양식 좀비 분장을 그대로 하면 느낌이 달라진다고 했어요. 그래서 얼굴 특징을 과장하는 실리콘 패치로 입체감을 보탰어요. <i class="v v-press">보도 확인</i></span></li>
+      <li><span><b>감염을 혈관으로 보여줬어요.</b> 바이러스가 혈관을 타고 번지는 모습을 시각화해서, 사람이 좀비로 바뀌는 과정이 한눈에 읽혀요. 분장이 이야기의 시계 역할을 한 거예요. <i class="v v-single">단일 출처</i></span></li>
+      <li><span><b>움직임과 한 세트로 설계했어요.</b> 안무가 전영이 뼈가 꺾이는 듯한 본브레이킹 동작으로 기존 좀비물과 다른 움직임을 만들었어요. 얼굴 분장이 과하지 않아도 무서운 이유가 여기 있어요. <i class="v v-single">단일 출처</i></span></li>
+    </ol>
+    <div class="apply"><b>지현 현장 적용</b>해외 분장 레퍼런스를 볼 때는 '한국 배우 얼굴에서도 같은 효과가 나는가'를 먼저 따져 보세요. 얼굴이 평평할수록 그림자로만 입체를 내기 어려워서, 작은 패치나 하이라이트로 높낮이를 보태야 할 때가 많아요. 병이나 감염이 진행되는 역할이면 부산행처럼 '어디서 시작해 어디로 번지는지' 방향을 정해 두면 회차가 섞여도 연속성이 지켜져요. <i class="v v-mine">해석</i></div>
+    <div class="refs"><span class="mono">더 보기</span><a href="https://v.daum.net/v/20251215125649305" target="_blank" rel="noopener">다음: 안무·특수분장으로 탄생한 K-좀비</a><a href="https://cine21.com/news/view/?mag_id=85290" target="_blank" rel="noopener">씨네21: 셀이 작업하는 방식</a><a href="https://cine21.com/news/view/?mag_id=84792" target="_blank" rel="noopener">씨네21: 부산행 스태프들이 재구성한 현장</a></div>
+  </article>
+
+  <!-- 3 킹덤 -->
+  <article class="work" id="w-kingdom">
+    <div class="kicker"><span class="num">대규모</span><span class="mono">넷플릭스 시리즈 · 2019~2021</span></div>
+    <h3>킹덤<small>Kingdom</small></h3>
+    <div class="meta"><span>특수분장 테크니컬 아트스튜디오 셀 (대표 황효균)</span><i class="v v-press">보도 확인</i></div>
+    <p>조선 사극에 좀비를 넣은 한국 시리즈예요. 황효균 대표는 '부산행', '기생충' 특수분장에도 참여한 인물로 소개돼요 <i class="v v-single">단일 출처</i>. 사람 수가 많은 대규모 분장을 어떻게 설계하는지 배우기 좋은 작품이에요.</p>
+    <div class="stats">
+      <div class="stat"><b>약 3,000명</b><span>'킹덤: 아신전' 좀비 분장 인원</span></div>
+      <div class="stat"><b>1톤 이상</b><span>'아신전'에 쓴 가짜 피</span></div>
+      <div class="stat"><b>150일</b><span>'아신전' 작업 기간</span></div>
+    </div>
+    <figure class="fig">
+      <svg viewBox="0 0 560 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="계급별 좀비 피부톤 설계 예시">
+        <g font-family="Noto Sans KR,sans-serif" text-anchor="middle">
+          <g transform="translate(70 20)"><ellipse cx="0" cy="60" rx="46" ry="58" fill="#C9C0B4" stroke="var(--ink)" stroke-width="1.3"/><circle cx="-16" cy="52" r="6" fill="#E9E6DF"/><circle cx="16" cy="52" r="6" fill="#E9E6DF"/><path d="M-26 78 q10 8 20 0 M6 78 q10 8 20 0" stroke="#7A6A62" fill="none"/></g>
+          <g transform="translate(210 20)"><ellipse cx="0" cy="60" rx="46" ry="58" fill="#A89880" stroke="var(--ink)" stroke-width="1.3"/><circle cx="-16" cy="52" r="6" fill="#E9E6DF"/><circle cx="16" cy="52" r="6" fill="#E9E6DF"/><path d="M-30 30 q12 20 4 40 M24 28 q-8 22 6 44" stroke="#5E4A52" fill="none"/></g>
+          <g transform="translate(350 20)"><ellipse cx="0" cy="60" rx="46" ry="58" fill="#8C7660" stroke="var(--ink)" stroke-width="1.3"/><circle cx="-16" cy="52" r="6" fill="#E9E6DF"/><circle cx="16" cy="52" r="6" fill="#E9E6DF"/><path d="M-30 30 q12 20 4 40 M24 28 q-8 22 6 44 M-6 92 q6 10 14 0" stroke="#4E3A40" fill="none"/><circle cx="-24" cy="96" r="3" fill="#6E2A2A"/></g>
+          <g transform="translate(490 20)"><ellipse cx="0" cy="60" rx="46" ry="58" fill="#6E5C4C" stroke="var(--ink)" stroke-width="1.3"/><circle cx="-16" cy="52" r="6" fill="#E9E6DF"/><circle cx="16" cy="52" r="6" fill="#E9E6DF"/><path d="M-30 30 q12 20 4 40 M24 28 q-8 22 6 44" stroke="#3A2A30" fill="none"/><path d="M-20 92 q20 14 40 0" stroke="#6E2A2A" stroke-width="3" fill="none"/></g>
+          <g font-size="13" fill="var(--ink)"><text x="70" y="160">궁중·양반</text><text x="210" y="160">관리·군졸</text><text x="350" y="160">평민</text><text x="490" y="160">굶주린 백성</text></g>
+          <g font-size="11.5" fill="var(--muted)"><text x="70" y="180">창백, 상처 적음</text><text x="210" y="180">혈관 노출</text><text x="350" y="180">햇볕·흙 톤</text><text x="490" y="180">어둡고 거친 질감</text></g>
+          <path d="M40 198 H520" stroke="var(--line)" stroke-width="2" marker-end="url(#ar)"/>
+          <defs><marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8Z" fill="var(--muted)"/></marker></defs>
+        </g>
+      </svg>
+      <figcaption>셀은 작품 주제인 계급 차이를 보여주려고 좀비 피부색을 계급과 상황에 따라 다르게 정했다고 밝혔어요. 실제 톤 값은 공개되지 않아서, 위 단계와 색은 원리를 보여주는 예시예요. <i class="v v-press">보도 확인</i> <i class="v v-mine">해석</i></figcaption>
+    </figure>
+    <h4>왜 잘됐나</h4>
+    <ol class="why">
+      <li><span><b>분장이 주제를 말했어요.</b> 좀비는 다 똑같이 무섭게 만들기 쉬운데, 계급별로 피부색을 나눠서 '누가 먼저 죽고 누가 버려졌나'를 얼굴로 보여줬어요. <i class="v v-press">보도 확인</i></span></li>
+      <li><span><b>3,000명을 같은 기준으로 맞췄어요.</b> 인원이 많을수록 사람마다 손이 달라져 톤이 흔들려요. 계급별 기준표가 있었기에 여러 분장사가 동시에 작업해도 화면이 통일됐을 거예요. <i class="v v-mine">해석</i></span></li>
+      <li><span><b>전 세계 동시 공개를 의식했어요.</b> 황효균 대표는 190개국에 동시에 나가는 기회라서 디테일에 집중했다고 말했어요. 4K 대형 화면으로 보는 시청자를 전제로 한 거예요. <i class="v v-press">보도 확인</i></span></li>
+    </ol>
+    <div class="apply"><b>지현 현장 적용</b>보조 출연자가 많은 장면은 '기준 얼굴'을 2~4종으로 정하고 사진과 색 배합을 붙인 카드를 만들어 팀원들에게 나눠 주세요. 손이 여럿이어도 톤이 흔들리지 않아요. <i class="v v-mine">해석</i></div>
+    <div class="refs"><span class="mono">더 보기</span><a href="https://www.wikitree.co.kr/articles/692933" target="_blank" rel="noopener">위키트리: 좀비 피부색이 다른 이유</a><a href="https://sports.khan.co.kr/entertainment/sk_index.html?art_id=202109291034013&amp;sec_id=540201" target="_blank" rel="noopener">스포츠경향: 아신전 3,000명 작업</a><a href="https://www.newswire.co.kr/newsRead.php?no=927540" target="_blank" rel="noopener">CNN 필름 스쿨 인터뷰 안내</a></div>
+  </article>
+</section>
+
+<section id="camera">
+  <div class="ch-head"><span class="mono">03 · 카메라 앞 체크포인트</span><h2>보철은 어디서 들키나</h2></div>
+  <p class="lead">이번 호 세 작품 모두 보철이나 특수분장을 썼어요. 보철이 화면에서 들키는 곳은 거의 정해져 있어요. 피스 가장자리, 빛이 비치는 정도, 움직일 때 생기는 주름이에요.</p>
+  <div class="kelvin" role="img" aria-label="빛의 방향에 따라 보철 가장자리가 드러나는 정도">
+    <svg viewBox="0 0 560 190" xmlns="http://www.w3.org/2000/svg">
+      <g font-family="Noto Sans KR,sans-serif" font-size="12.5" fill="var(--ink)" text-anchor="middle">
+        <g transform="translate(95 0)">
+          <rect x="-70" y="70" width="140" height="60" rx="8" fill="#E8CDB4" stroke="var(--ink)" stroke-width="1.2"/>
+          <path d="M-40 70 Q0 40 40 70" fill="#E3C3A6" stroke="var(--ink)" stroke-width="1"/>
+          <path d="M-90 20 L-40 66 M-70 14 L-20 60" stroke="#E2A23A" stroke-width="2"/>
+          <text x="0" y="152">정면광</text><text x="0" y="170" font-size="11.5" fill="var(--muted)">경계가 잘 숨음</text>
+        </g>
+        <g transform="translate(280 0)">
+          <rect x="-70" y="70" width="140" height="60" rx="8" fill="#E8CDB4" stroke="var(--ink)" stroke-width="1.2"/>
+          <path d="M-40 70 Q0 40 40 70" fill="#E3C3A6" stroke="var(--ink)" stroke-width="1"/>
+          <path d="M40 70 Q60 70 70 76" fill="none" stroke="#6A4A3A" stroke-width="3"/>
+          <path d="M-130 66 L-50 66 M-130 56 L-50 60" stroke="#E2A23A" stroke-width="2"/>
+          <text x="0" y="152">측면광·사광</text><text x="0" y="170" font-size="11.5" fill="var(--lip)">가장자리 그림자가 생김</text>
+        </g>
+        <g transform="translate(465 0)">
+          <rect x="-70" y="70" width="140" height="60" rx="8" fill="#E8CDB4" stroke="var(--ink)" stroke-width="1.2"/>
+          <path d="M-40 70 Q0 40 40 70" fill="#F0D9C6" fill-opacity=".7" stroke="var(--ink)" stroke-width="1"/>
+          <path d="M-50 10 L-10 50 M50 10 L10 50" stroke="#E2A23A" stroke-width="2"/>
+          <text x="0" y="152">역광·강한 탑광</text><text x="0" y="170" font-size="11.5" fill="var(--lip)">두께 차이로 투과가 달라짐</text>
+        </g>
+      </g>
+    </svg>
+  </div>
+  <p class="note" style="margin-top:10px">조명별 노출 경향은 촬영 현장 경험을 바탕으로 한 일반론이에요. <i class="v v-mine">해석</i></p>
+  <ul class="tips">
+    <li><b>측면광 장면은 미리 알아 두세요</b>빛이 옆에서 낮게 들어오면 피스 가장자리의 미세한 단차가 그림자로 드러나요. 콘티에 측면광 클로즈업이 있으면 가장자리 블렌딩에 시간을 더 쓰세요.</li>
+    <li><b>역광은 두께를 드러내요</b>보철이 두꺼운 곳과 얇은 곳은 빛이 통과하는 정도가 달라요. 귀, 콧볼처럼 실제로 빛이 비치는 부위는 보철도 비슷하게 비쳐야 자연스러워요.</li>
+    <li><b>고해상도 클로즈업은 촬영팀에 물어보세요</b>요즘 드라마는 4K 이상으로 찍고 확대해서 쓰기도 해요. 어떤 장면을 몇 mm 렌즈로 얼마나 가깝게 찍는지 촬영감독에게 물어보면 어디에 공들일지 정할 수 있어요.</li>
+    <li><b>모니터로 한 번 확인하세요</b>현장 육안보다 모니터가 정확해요. 첫 테이크 전에 모니터로 가장자리만 확인해도 재촬영을 줄일 수 있어요.</li>
+  </ul>
+</section>
+
+<section id="homework">
+  <div class="ch-head"><span class="mono">04 · 이번 주 숙제</span><h2>30분이면 끝나요</h2></div>
+  <ul class="todo">
+    <li><label for="n01-t1"><input type="checkbox" id="n01-t1"><span>부산행에서 감염 장면 하나를 골라 물림부터 변이까지 혈관이 번지는 방향을 메모</span><span class="min">10분</span></label></li>
+    <li><label for="n01-t2"><input type="checkbox" id="n01-t2"><span>킹덤 시즌1에서 좀비 4명을 캡처해 피부톤을 계급 순으로 나열해 보기</span><span class="min">10분</span></label></li>
+    <li><label for="n01-t3"><input type="checkbox" id="n01-t3"><span>올리브영 매장에서 어뮤즈 리퀴드 블러쉬 테스터를 쿠션 위에 올려 밀림 확인</span><span class="min">10분</span></label></li>
+  </ul>
+</section>
+
+<section id="verify">
+  <div class="ch-head"><span class="mono">05 · 검증·출처</span><h2>뭘 어떻게 확인했나</h2></div>
+  <p>핵심 자료는 원문 페이지를 직접 열어 확인했어요. 두 곳 이상이 같은 내용이면 '보도 확인', 한 곳뿐이면 '단일 출처'로 표시했어요.</p>
+  <div class="grid-table"><table>
+    <thead><tr><th>내용</th><th>판정</th><th>근거</th></tr></thead>
+    <tbody>
+      <tr><td>서울의 봄 특수분장 황효균(셀), 100시간+, 인조 피부 35개+, 두상·이마 주름·콧방울·눈꼬리·가발, 캐리커처 설계 철학</td><td><i class="v v-single">단일 출처</i></td><td>YTN 황효균 인터뷰. 담당자 본인 발언이라 신뢰도 높음</td></tr>
+      <tr><td>서울의 봄 회당 분장 시간</td><td><i class="v v-conflict">출처 충돌</i></td><td>YTN 약 3시간, 아주경제(황정민 발언) 기본 4시간</td></tr>
+      <tr><td>부산행 특수분장 곽태용, 동양인 맞춤 좀비, 혈관 확산 표현, 안무 전영, 1,157만</td><td><i class="v v-single">단일 출처</i></td><td>다음(우리시대의영화 부산행) 기사</td></tr>
+      <tr><td>부산행 좀비 실리콘 패치로 얼굴 특징 과장·표정 주름 강조</td><td><i class="v v-press">보도 확인</i></td><td>씨네21 셀 특집, 다음 기사 내용과 일치</td></tr>
+      <tr><td>킹덤 계급별 좀비 피부색, 아신전 3,000명·1톤·150일, 190개국</td><td><i class="v v-press">보도 확인</i></td><td>위키트리, 스포츠경향 일치</td></tr>
+      <tr><td>도해, 현장 적용 팁, 카메라 팁</td><td><i class="v v-mine">해석</i></td><td>공개 자료를 바탕으로 한 분석·예시</td></tr>
+      <tr><td>10월 올리브영 신상 정보</td><td><i class="v v-ok">공식 확인</i></td><td>올리브영 공식몰. 풍년다방 에디션만 단일 출처</td></tr>
+    </tbody>
+  </table></div>
+  <h3 style="font-size:17px;margin:24px 0 8px">출처</h3>
+  <ol class="sources">
+    <li><a href="https://www.ytn.co.kr/_ln/0117_202312060801020260" target="_blank" rel="noopener">YTN: 전두광 특수분장만 100시간</a></li>
+    <li><a href="https://www.ajunews.com/view/20231109171541323" target="_blank" rel="noopener">아주경제: 황정민 "대머리 분장, 준비만 4시간"</a></li>
+    <li><a href="https://v.daum.net/v/20251215125649305" target="_blank" rel="noopener">다음: [우리시대의영화 부산행] 안무·특수분장으로 탄생한 K-좀비</a></li>
+    <li><a href="https://cine21.com/news/view/?mag_id=85290" target="_blank" rel="noopener">씨네21: 테크니컬 아트 스튜디오 셀이 작업하는 방식</a></li>
+    <li><a href="https://www.wikitree.co.kr/articles/692933" target="_blank" rel="noopener">위키트리: '킹덤' 좀비들, 피부색도 다 달랐다</a></li>
+    <li><a href="https://sports.khan.co.kr/entertainment/sk_index.html?art_id=202109291034013&amp;sec_id=540201" target="_blank" rel="noopener">스포츠경향: 황효균 대표 "'킹덤: 아신전' 3000여명 좀비 작업"</a></li>
+    <li><a href="https://corp.oliveyoung.com/ko/news" target="_blank" rel="noopener">올리브영 뉴스룸</a></li>
+    <li><a href="https://m.oliveyoung.co.kr/m/mtn?menu=sale" target="_blank" rel="noopener">올리브영 세일관</a></li>
+    <li><a href="https://techjeju.com/%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81-10%EC%9B%94-%EC%84%B8%EC%9D%BC-%EA%B8%B0%EA%B0%84%C2%B7%EB%82%A0%EC%A7%9C%EF%BD%9C%EC%BD%9C%EB%9D%BC%EB%B3%B4%C2%B7%EC%98%AC%EC%98%81%ED%94%BD%C2%B7%EB%B9%85/" target="_blank" rel="noopener">techjeju: 올리브영 10월 올영픽 정리</a></li>
+  </ol>
+</section>
+
+<!--ARCHIVE-->
+<section id="archive">
+  <div class="ch-head"><span class="mono">06 · 지난 호</span><h2>보관함</h2></div>
+  <p>매주 새 호가 나오면 지난 호는 여기 그대로 쌓여요. 한 호가 사진 없이 글과 도해만으로 40KB 정도라, 몇 년치를 모아도 용량 걱정은 없어요.</p>
+  <ul class="archive">
+    <li><span class="cur"><span class="no">No.01</span><span>K-특수분장의 기준: 서울의 봄, 부산행, 킹덤</span><span class="d">10.05 · 지금 보는 호</span></span></li>
+  </ul>
+</section>
+<!--/ARCHIVE-->
+
+<footer>범수가 매주 월요일 아침에 보내는 다이제스트예요. 틀린 내용이나 다뤄 봤으면 하는 작품이 있으면 말해 주세요.</footer>
+</div>
+
+<script>
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.tabs a'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){
+          links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id);});
+          var on=document.querySelector('.tabs a.on'),ol=document.querySelector('.tabs ol');
+          if(on&&ol){ol.scrollLeft=Math.max(0,on.offsetLeft-16);}
+        }
+      });
+    },{rootMargin:'-40% 0px -55% 0px'});
+    document.querySelectorAll('section[id]').forEach(function(s){io.observe(s);});
+  }
+  document.querySelectorAll('.todo input').forEach(function(cb){
+    try{cb.checked=localStorage.getItem('hw-'+cb.id)==='1';}catch(_){}
+    cb.addEventListener('change',function(){try{localStorage.setItem('hw-'+cb.id,cb.checked?'1':'0');}catch(_){}});
+  });
+})();
+</script>
+
+</html>
