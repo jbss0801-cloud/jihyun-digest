@@ -132,12 +132,39 @@ tr:last-child td{border-bottom:0}
 .archive .d{font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums}
 .archive .cur{border-style:dashed}
 footer{margin-top:40px;font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
+
+/* 할인 캘린더 */
+.cal{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px;overflow-x:auto}
+.cal-in{min-width:560px;display:grid;gap:8px}
+.cal-days{display:grid;grid-template-columns:110px repeat(31,1fr);font-family:var(--f-mono);font-size:10px;color:var(--muted);text-align:center}
+.cal-days span.today{color:var(--lip);font-weight:500}
+.cal-row{display:grid;grid-template-columns:110px repeat(31,1fr);align-items:center;min-height:30px;position:relative}
+.cal-row .lbl{font-size:12.5px;font-weight:500;padding-right:8px;line-height:1.3}
+.cal-row .bar{height:22px;border-radius:6px;font-size:11px;display:flex;align-items:center;padding:0 6px;white-space:nowrap;overflow:hidden;color:var(--paper)}
+.bar.live{background:var(--lip)}
+.bar.soon{background:var(--press)}
+.bar.past{background:var(--line);color:var(--muted)}
+.bar.tbd{background:transparent;border:1.5px dashed var(--muted);color:var(--muted)}
+.cal-grid{position:absolute;inset:0;display:grid;grid-template-columns:110px repeat(31,1fr);pointer-events:none}
+.cal-grid i.today{grid-column:var(--d);border-left:2px solid var(--lip);opacity:.6}
+.deals{display:grid;gap:12px;margin-top:16px}
+.deal{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px;display:grid;gap:8px;min-width:0}
+.deal .hd{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.deal h3{font-family:var(--f-body);font-size:16px;font-weight:700}
+.st{font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:4px}
+.st.live{background:var(--lip);color:var(--paper)}
+.st.soon{background:var(--press);color:var(--paper)}
+.st.tbd{border:1px dashed var(--muted);color:var(--muted)}
+.deal .when{font-family:var(--f-mono);font-size:12.5px;color:var(--muted)}
+.deal ul{margin:0;padding-left:18px;font-size:14px;display:grid;gap:2px}
+.deal .tip{font-size:13.5px;background:var(--lip-soft);border-radius:8px;padding:8px 10px}
+.deal .src{font-size:12px}
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 </style>
 
 <div class="wrap">
 <header class="cover">
-  <div class="issue"><span class="mono">No.01 · 2026년 10월 2주차</span><span class="mono">10월 5일 발행</span></div>
+  <div class="issue"><span class="mono">No.01 · 2026년 10월 2주차</span><span class="mono">10월 5일 발행 · 10월 6일 할인 소식 추가</span></div>
   <h1>지현이를 위한<br><em>분장·뷰티</em> 주간 다이제스트</h1>
   <p>이번 호 명작 해부 주제는 'K-특수분장의 기준'이에요. 배우를 실존 인물 모티브 캐릭터로 바꾼 영화, K-좀비를 처음 만든 영화, 수천 명 좀비를 계급별로 나눈 시리즈예요. 앞으로 명작 해부는 한국 영화·드라마만 다뤄요.</p>
 </header>
@@ -146,11 +173,12 @@ footer{margin-top:40px;font-size:13px;color:var(--muted);border-top:1px solid va
   <ol>
     <li><a href="#summary"><b>00</b>요약</a></li>
     <li><a href="#products"><b>01</b>신상·업계</a></li>
-    <li><a href="#classics"><b>02</b>명작 해부</a></li>
-    <li><a href="#camera"><b>03</b>카메라 앞</a></li>
-    <li><a href="#homework"><b>04</b>숙제</a></li>
-    <li><a href="#verify"><b>05</b>검증·출처</a></li>
-    <!--ARCHIVE-TAB--><li><a href="#archive"><b>06</b>지난 호</a></li><!--/ARCHIVE-TAB-->
+    <li><a href="#deals"><b>02</b>할인 소식</a></li>
+    <li><a href="#classics"><b>03</b>명작 해부</a></li>
+    <li><a href="#camera"><b>04</b>카메라 앞</a></li>
+    <li><a href="#homework"><b>05</b>숙제</a></li>
+    <li><a href="#verify"><b>06</b>검증·출처</a></li>
+    <!--ARCHIVE-TAB--><li><a href="#archive"><b>07</b>지난 호</a></li><!--/ARCHIVE-TAB-->
   </ol>
 </nav>
 
@@ -159,7 +187,7 @@ footer{margin-top:40px;font-size:13px;color:var(--muted);border-top:1px solid va
   <ul class="tldr">
     <li><span class="tag">명작</span><div><b>서울의 봄은 초상화가 아니라 캐리커처로 갔어요.</b> 실존 인물을 복제하지 않고 두상·이마 주름·코·눈꼬리 네 군데를 바꿔 인상을 만들었어요.</div></li>
     <li><span class="tag">명작</span><div><b>부산행은 서양 좀비를 한국 얼굴에 맞게 다시 설계했어요.</b> 평평한 얼굴엔 실리콘 패치로 입체를 보태고, 감염은 혈관으로 번지게 했어요.</div></li>
-    <li><span class="tag">신상</span><div><b>10월 신상은 콜라보 쿠션이 많은데, 대부분 패키지만 바뀐 한정판이에요.</b> 키트에 넣을 만한 건 새 제형인 리퀴드 블러셔 정도예요.</div></li>
+    <li><span class="tag">할인</span><div><b>지금 살 거면 쿠팡, 올리브영은 25일까지 기다리세요.</b> 쿠팡 뷰티풀데이(~18일)가 진행 중이고, 올리브영 올영데이는 25~27일이에요.</div></li>
   </ul>
   <div class="legend" style="margin-top:16px" aria-label="검증 표시 안내">
     <span><i class="v v-ok">공식 확인</i> 원문·공식 기록 확인</span>
@@ -219,8 +247,66 @@ footer{margin-top:40px;font-size:13px;color:var(--muted);border-top:1px solid va
   </ul>
 </section>
 
+<section id="deals">
+  <div class="ch-head"><span class="mono">02 · 할인 소식</span><h2>이번 주 언제 뭘 사면 싼가</h2></div>
+  <p class="lead">지금 확실히 진행 중인 건 쿠팡 뷰티풀데이 하나예요. 올리브영은 이달 말 올영데이(25~27일)까지 기다리는 게 나아요. 대규모 '올영세일'은 9월에 끝났고, 다음은 12월로 예상돼요.</p>
+  <div class="cal" role="img" aria-label="10월 할인 일정: 쿠팡 뷰티풀데이 6일부터 18일, 올리브영 올영데이 25일부터 27일, 다이소몰 환절기 행사 미발표">
+    <div class="cal-in">
+      <div class="cal-days"><span></span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span class="today">6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span></div>
+      <div class="cal-row"><span class="lbl">쿠팡</span><div class="bar live" style="grid-column:7/20">뷰티풀데이 6~18일</div><div class="cal-grid" aria-hidden="true"><i class="today" style="--d:7"></i></div></div><div class="cal-row"><span class="lbl">올리브영</span><div class="bar past" style="grid-column:2/33">10월 올영픽 한정 기획 (월중 상시)</div><div class="cal-grid" aria-hidden="true"><i class="today" style="--d:7"></i></div></div><div class="cal-row"><span class="lbl">올리브영</span><div class="bar soon" style="grid-column:26/29">올영데이 25~27</div><div class="cal-grid" aria-hidden="true"><i class="today" style="--d:7"></i></div></div><div class="cal-row"><span class="lbl">다이소몰</span><div class="bar tbd" style="grid-column:14/21">환절기 뷰티대전? 미발표</div><div class="cal-grid" aria-hidden="true"><i class="today" style="--d:7"></i></div></div>
+    </div>
+  </div>
+  <div class="legend" style="margin-top:10px;border:0;padding:0">
+    <span><i class="st live">진행 중</i></span><span><i class="st soon">확정 예정</i></span><span><i class="st tbd">미발표</i> 작년 기준 추정</span><span><i class="st" style="background:var(--line);color:var(--muted)">상시</i></span><span style="color:var(--lip)">세로선 = 오늘(10/6)</span>
+  </div>
+
+  <div class="deals">
+    <article class="deal">
+      <div class="hd"><span class="st live">진행 중</span><h3>쿠팡 뷰티풀데이</h3><i class="v v-press">보도 확인</i></div>
+      <div class="when">10.06 (화) ~ 10.18 (일) · 와우회원 대상</div>
+      <ul>
+        <li>에이지투웨니스, 바닐라코, 닥터자르트, 롬앤, 에스트라 등 16개 브랜드, 상품 2,000여 개</li>
+        <li>2만 원 이상 구매 시 5,000원 다운로드 쿠폰</li>
+        <li>브랜드별 즉시 할인, 일부 카드사 최대 7% 추가 할인</li>
+        <li>매일 오전 7시 '골드박스' 한정 수량 특가</li>
+      </ul>
+      <div class="tip"><b>키트 보충 포인트</b> 바닐라코 클렌징밤(현장 메이크업 지우기)과 롬앤 립을 여기서 채워 두면 좋아요. 2만 원을 넘겨 쿠폰을 쓰려면 소모품을 한 번에 묶어 사세요. <i class="v v-mine">해석</i></div>
+      <div class="src"><a href="https://www.newspim.com/news/view/20261006000136" target="_blank" rel="noopener">뉴스핌</a> · <a href="https://www.starnewskorea.com/business-life/2026/10/06/2026100609235635093" target="_blank" rel="noopener">스타뉴스</a></div>
+    </article>
+    <article class="deal">
+      <div class="hd"><span class="st soon">확정 예정</span><h3>올리브영 올영데이</h3><i class="v v-single">단일 출처</i></div>
+      <div class="when">10.25 (일) ~ 10.27 (화)</div>
+      <ul>
+        <li>매달 25~27일 정기 행사. 전 품목 세일이 아니라 등급별 쿠폰, 추가 적립, 일부 상품 할인 위주예요</li>
+        <li>10월은 환절기 보습 기획전(수분크림, 바디로션, 립케어)이 같이 열릴 것으로 예상돼요</li>
+        <li>지금 진행 중인 '10월 올영픽' 한정 기획(클리오 풍년다방, 라네즈×마뗑킴 등)은 월중 상시 판매예요</li>
+      </ul>
+      <div class="tip"><b>사지 말고 기다릴 것</b> 올리브영에서 큰 금액을 쓸 거면 25일까지 기다리세요. 대규모 올영세일은 12월이 다음 차례로 예상되지만 날짜는 아직 발표 전이에요. <i class="v v-mine">해석</i></div>
+      <div class="src"><a href="https://www.sano.co.kr/10%EC%9B%94%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81%EC%84%B8%EC%9D%BC%EA%B8%B0%EA%B0%84-%EC%96%B8%EC%A0%9C%EC%9D%BC%EA%B9%8C-2026-%EC%98%AC%EC%98%81%EB%8D%B0%EC%9D%B4-%EB%82%A0%EC%A7%9C%EC%99%80-%ED%98%9C" target="_blank" rel="noopener">10월 올영데이 정리글</a> · <a href="https://www.make2t.kr/2026/09/oliveyoung-black-friday-vs-sale-2026.html" target="_blank" rel="noopener">2026 올영세일 일정 정리</a></div>
+    </article>
+    <article class="deal">
+      <div class="hd"><span class="st tbd">미발표</span><h3>다이소몰 환절기 뷰티 행사</h3><i class="v v-single">단일 출처</i> <i class="v v-mine">해석</i></div>
+      <div class="when">올해 날짜 미발표 · 작년엔 10.15 ~ 10.19</div>
+      <ul>
+        <li>작년 10월 중순 다이소몰 'Daiso-DAY 환절기 뷰티대전'이 열렸어요. 신상 오픈런, 뷰티 랭킹, 환절기 추천템 코너로 구성됐어요</li>
+        <li>올해는 9월 중순 VT코스메틱·본셉·닥터오라클 신규 라인을 낸 가을 신상 행사까지만 확인돼요</li>
+      </ul>
+      <div class="tip"><b>현장 소모품은 다이소가 답</b> 퍼프, 스펀지, 면봉, 브러시 클리너처럼 많이 버리는 소모품은 다이소가 가장 싸요. 행사 발표가 뜨면 다음 호에 바로 반영할게요. <i class="v v-mine">해석</i></div>
+      <div class="src"><a href="https://www.efnews.co.kr/news/articleView.html?idxno=123975" target="_blank" rel="noopener">파이낸셜신문 (2025년 행사)</a> · <a href="https://www.shinailbo.co.kr/news/articleView.html?idxno=5063417" target="_blank" rel="noopener">신아일보 (2026 가을 신상)</a></div>
+    </article>
+    <article class="deal">
+      <div class="hd"><span class="st tbd">해당 없음</span><h3>브랜드 공식몰</h3><i class="v v-ok">공식 확인</i></div>
+      <div class="when">10.06 기준</div>
+      <ul>
+        <li>아모레퍼시픽 공식몰(아모레몰): 진행 중인 이벤트 없음. 신규고객 10% 추가 할인만 상시 운영</li>
+      </ul>
+      <div class="src"><a href="https://www.amoremall.com/kr/ko/display/nowEvent?displayMenuId=nowEvent" target="_blank" rel="noopener">아모레몰 이벤트 페이지</a></div>
+    </article>
+  </div>
+</section>
+
 <section id="classics">
-  <div class="ch-head"><span class="mono">02 · 명작 해부</span><h2>분장으로 인정받은 한국 작품 3편</h2></div>
+  <div class="ch-head"><span class="mono">03 · 명작 해부</span><h2>분장으로 인정받은 한국 작품 3편</h2></div>
   <p class="lead">매주 분장이 잘된 걸로 유명하거나 작품성을 인정받은 한국 영화·드라마 3편을 골라, 왜 잘됐는지 뜯어봐요. 이번 세 편은 모두 특수분장팀 셀이 맡았어요. 같은 팀이 실존 인물, 현대 좀비, 사극 좀비를 어떻게 다르게 풀었는지 비교해 보면 재밌어요. 수치와 제작 과정은 인터뷰와 보도로 확인한 것만 썼어요.</p>
   <p class="note">스틸 사진은 저작권 때문에 넣을 수 없어서, 설계 원리를 직접 그린 도해로 설명했어요. 실제 장면은 각 작품의 '더 보기' 기사에서 볼 수 있어요.</p>
 
@@ -356,7 +442,7 @@ footer{margin-top:40px;font-size:13px;color:var(--muted);border-top:1px solid va
 </section>
 
 <section id="camera">
-  <div class="ch-head"><span class="mono">03 · 카메라 앞 체크포인트</span><h2>보철은 어디서 들키나</h2></div>
+  <div class="ch-head"><span class="mono">04 · 카메라 앞 체크포인트</span><h2>보철은 어디서 들키나</h2></div>
   <p class="lead">이번 호 세 작품 모두 보철이나 특수분장을 썼어요. 보철이 화면에서 들키는 곳은 거의 정해져 있어요. 피스 가장자리, 빛이 비치는 정도, 움직일 때 생기는 주름이에요.</p>
   <div class="kelvin" role="img" aria-label="빛의 방향에 따라 보철 가장자리가 드러나는 정도">
     <svg viewBox="0 0 560 190" xmlns="http://www.w3.org/2000/svg">
@@ -393,7 +479,7 @@ footer{margin-top:40px;font-size:13px;color:var(--muted);border-top:1px solid va
 </section>
 
 <section id="homework">
-  <div class="ch-head"><span class="mono">04 · 이번 주 숙제</span><h2>30분이면 끝나요</h2></div>
+  <div class="ch-head"><span class="mono">05 · 이번 주 숙제</span><h2>30분이면 끝나요</h2></div>
   <ul class="todo">
     <li><label for="n01-t1"><input type="checkbox" id="n01-t1"><span>부산행에서 감염 장면 하나를 골라 물림부터 변이까지 혈관이 번지는 방향을 메모</span><span class="min">10분</span></label></li>
     <li><label for="n01-t2"><input type="checkbox" id="n01-t2"><span>킹덤 시즌1에서 좀비 4명을 캡처해 피부톤을 계급 순으로 나열해 보기</span><span class="min">10분</span></label></li>
@@ -402,7 +488,7 @@ footer{margin-top:40px;font-size:13px;color:var(--muted);border-top:1px solid va
 </section>
 
 <section id="verify">
-  <div class="ch-head"><span class="mono">05 · 검증·출처</span><h2>뭘 어떻게 확인했나</h2></div>
+  <div class="ch-head"><span class="mono">06 · 검증·출처</span><h2>뭘 어떻게 확인했나</h2></div>
   <p>핵심 자료는 원문 페이지를 직접 열어 확인했어요. 두 곳 이상이 같은 내용이면 '보도 확인', 한 곳뿐이면 '단일 출처'로 표시했어요.</p>
   <div class="grid-table"><table>
     <thead><tr><th>내용</th><th>판정</th><th>근거</th></tr></thead>
@@ -412,6 +498,10 @@ footer{margin-top:40px;font-size:13px;color:var(--muted);border-top:1px solid va
       <tr><td>부산행 특수분장 곽태용, 동양인 맞춤 좀비, 혈관 확산 표현, 안무 전영, 1,157만</td><td><i class="v v-single">단일 출처</i></td><td>다음(우리시대의영화 부산행) 기사</td></tr>
       <tr><td>부산행 좀비 실리콘 패치로 얼굴 특징 과장·표정 주름 강조</td><td><i class="v v-press">보도 확인</i></td><td>씨네21 셀 특집, 다음 기사 내용과 일치</td></tr>
       <tr><td>킹덤 계급별 좀비 피부색, 아신전 3,000명·1톤·150일, 190개국</td><td><i class="v v-press">보도 확인</i></td><td>위키트리, 스포츠경향 일치</td></tr>
+      <tr><td>쿠팡 뷰티풀데이 10/6~18, 16개 브랜드, 2,000여 개, 5,000원 쿠폰, 카드 7%</td><td><i class="v v-press">보도 확인</i></td><td>뉴스핌, 스타뉴스 일치</td></tr>
+      <tr><td>올영데이 10/25~27, 다음 대규모 올영세일 12월(날짜 미정)</td><td><i class="v v-single">단일 출처</i></td><td>블로그 정리글. 올영데이는 매달 25~27일 정기 행사</td></tr>
+      <tr><td>다이소몰 환절기 행사 (작년 10/15~19)</td><td><i class="v v-single">단일 출처</i></td><td>파이낸셜신문 2025년 기사. 올해 일정은 미발표</td></tr>
+      <tr><td>아모레몰 진행 중 이벤트 없음</td><td><i class="v v-ok">공식 확인</i></td><td>아모레몰 이벤트 페이지 직접 확인</td></tr>
       <tr><td>도해, 현장 적용 팁, 카메라 팁</td><td><i class="v v-mine">해석</i></td><td>공개 자료를 바탕으로 한 분석·예시</td></tr>
       <tr><td>10월 올리브영 신상 정보</td><td><i class="v v-ok">공식 확인</i></td><td>올리브영 공식몰. 풍년다방 에디션만 단일 출처</td></tr>
     </tbody>
@@ -424,6 +514,10 @@ footer{margin-top:40px;font-size:13px;color:var(--muted);border-top:1px solid va
     <li><a href="https://cine21.com/news/view/?mag_id=85290" target="_blank" rel="noopener">씨네21: 테크니컬 아트 스튜디오 셀이 작업하는 방식</a></li>
     <li><a href="https://www.wikitree.co.kr/articles/692933" target="_blank" rel="noopener">위키트리: '킹덤' 좀비들, 피부색도 다 달랐다</a></li>
     <li><a href="https://sports.khan.co.kr/entertainment/sk_index.html?art_id=202109291034013&amp;sec_id=540201" target="_blank" rel="noopener">스포츠경향: 황효균 대표 "'킹덤: 아신전' 3000여명 좀비 작업"</a></li>
+    <li><a href="https://www.newspim.com/news/view/20261006000136" target="_blank" rel="noopener">뉴스핌: 쿠팡, 뷰티 2000여개 상품 할인</a></li>
+    <li><a href="https://www.starnewskorea.com/business-life/2026/10/06/2026100609235635093" target="_blank" rel="noopener">스타뉴스: 쿠팡 '뷰티풀데이' 개최</a></li>
+    <li><a href="https://www.efnews.co.kr/news/articleView.html?idxno=123975" target="_blank" rel="noopener">파이낸셜신문: 다이소몰 환절기 뷰티대전 (2025)</a></li>
+    <li><a href="https://www.amoremall.com/kr/ko/display/nowEvent?displayMenuId=nowEvent" target="_blank" rel="noopener">아모레몰 이벤트</a></li>
     <li><a href="https://corp.oliveyoung.com/ko/news" target="_blank" rel="noopener">올리브영 뉴스룸</a></li>
     <li><a href="https://m.oliveyoung.co.kr/m/mtn?menu=sale" target="_blank" rel="noopener">올리브영 세일관</a></li>
     <li><a href="https://techjeju.com/%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81-10%EC%9B%94-%EC%84%B8%EC%9D%BC-%EA%B8%B0%EA%B0%84%C2%B7%EB%82%A0%EC%A7%9C%EF%BD%9C%EC%BD%9C%EB%9D%BC%EB%B3%B4%C2%B7%EC%98%AC%EC%98%81%ED%94%BD%C2%B7%EB%B9%85/" target="_blank" rel="noopener">techjeju: 올리브영 10월 올영픽 정리</a></li>
@@ -432,7 +526,7 @@ footer{margin-top:40px;font-size:13px;color:var(--muted);border-top:1px solid va
 
 <!--ARCHIVE-->
 <section id="archive">
-  <div class="ch-head"><span class="mono">06 · 지난 호</span><h2>보관함</h2></div>
+  <div class="ch-head"><span class="mono">07 · 지난 호</span><h2>보관함</h2></div>
   <p>매주 새 호가 나오면 지난 호는 여기 그대로 쌓여요. 한 호가 사진 없이 글과 도해만으로 40KB 정도라, 몇 년치를 모아도 용량 걱정은 없어요.</p>
   <ul class="archive">
     <li><span class="cur"><span class="no">No.01</span><span>K-특수분장의 기준: 서울의 봄, 부산행, 킹덤</span><span class="d">10.05 · 지금 보는 호</span></span></li>
