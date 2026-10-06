@@ -159,12 +159,28 @@ footer{margin-top:40px;font-size:13px;color:var(--muted);border-top:1px solid va
 .deal ul{margin:0;padding-left:18px;font-size:14px;display:grid;gap:2px}
 .deal .tip{font-size:13.5px;background:var(--lip-soft);border-radius:8px;padding:8px 10px}
 .deal .src{font-size:12px}
+
+/* 촬영 용어 */
+.term{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:20px;display:grid;gap:12px}
+.term .word{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px}
+.term .word b{font-family:var(--f-display);font-size:28px;font-weight:800}
+.term .word span{font-family:var(--f-mono);font-size:13px;color:var(--muted)}
+.term .def{font-size:16px;margin:0}
+.term .fig{background:var(--bg)}
+/* 업계 캘린더 */
+.events{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.events li{display:grid;grid-template-columns:76px 1fr;gap:14px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px;align-items:start}
+.events .dt{font-family:var(--f-mono);font-size:12px;color:var(--muted);line-height:1.4;text-align:center;border-right:1px solid var(--line);padding-right:12px}
+.events .dt b{display:block;font-family:var(--f-display);font-size:22px;color:var(--ink);font-weight:800}
+.events h3{font-family:var(--f-body);font-size:15.5px;font-weight:700;margin:0 0 2px}
+.events p{font-size:14px;margin:0}
+.events .why{font-size:13.5px;color:var(--muted);margin-top:4px}
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 </style>
 
 <div class="wrap">
 <header class="cover">
-  <div class="issue"><span class="mono">No.01 · 2026년 10월 2주차</span><span class="mono">10월 5일 발행 · 10월 6일 할인 소식 추가</span></div>
+  <div class="issue"><span class="mono">No.01 · 2026년 10월 2주차</span><span class="mono">10월 5일 발행 · 10월 6일 할인·용어·캘린더 추가</span></div>
   <h1>지현이를 위한<br><em>분장·뷰티</em> 주간 다이제스트</h1>
   <p>이번 호 명작 해부 주제는 'K-특수분장의 기준'이에요. 배우를 실존 인물 모티브 캐릭터로 바꾼 영화, K-좀비를 처음 만든 영화, 수천 명 좀비를 계급별로 나눈 시리즈예요. 앞으로 명작 해부는 한국 영화·드라마만 다뤄요.</p>
 </header>
@@ -176,9 +192,11 @@ footer{margin-top:40px;font-size:13px;color:var(--muted);border-top:1px solid va
     <li><a href="#deals"><b>02</b>할인 소식</a></li>
     <li><a href="#classics"><b>03</b>명작 해부</a></li>
     <li><a href="#camera"><b>04</b>카메라 앞</a></li>
-    <li><a href="#homework"><b>05</b>숙제</a></li>
-    <li><a href="#verify"><b>06</b>검증·출처</a></li>
-    <!--ARCHIVE-TAB--><li><a href="#archive"><b>07</b>지난 호</a></li><!--/ARCHIVE-TAB-->
+    <li><a href="#term"><b>05</b>촬영 용어</a></li>
+    <li><a href="#events"><b>06</b>업계 캘린더</a></li>
+    <li><a href="#homework"><b>07</b>숙제</a></li>
+    <li><a href="#verify"><b>08</b>검증·출처</a></li>
+    <!--ARCHIVE-TAB--><li><a href="#archive"><b>09</b>지난 호</a></li><!--/ARCHIVE-TAB-->
   </ol>
 </nav>
 
@@ -478,8 +496,67 @@ footer{margin-top:40px;font-size:13px;color:var(--muted);border-top:1px solid va
   </ul>
 </section>
 
+<section id="term">
+  <div class="ch-head"><span class="mono">05 · 촬영 용어 하나</span><h2>모니터 속 배우가 유독 칙칙해 보인다면</h2></div>
+  <article class="term">
+    <div class="word"><b>로그(Log) 촬영</b><span>Log · LUT · 룩</span></div>
+    <p class="def">빛의 밝은 쪽과 어두운 쪽 정보를 최대한 많이 담으려고, 일부러 흐리고 납작하게 찍는 방식이에요. 색과 대비는 나중에 색보정에서 입혀요.</p>
+    <figure class="fig">
+      <svg viewBox="0 0 560 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="같은 얼굴이 로그 화면에서는 회색빛으로 납작하게, LUT 적용 화면에서는 혈색과 대비가 살아나는 비교">
+        <g font-family="Noto Sans KR,sans-serif" text-anchor="middle">
+          <rect x="20" y="16" width="240" height="130" rx="10" fill="#8F8A86"/>
+          <ellipse cx="140" cy="81" rx="44" ry="54" fill="#B8ADA4"/>
+          <ellipse cx="118" cy="96" rx="12" ry="7" fill="#BCA49C"/><ellipse cx="162" cy="96" rx="12" ry="7" fill="#BCA49C"/>
+          <path d="M126 116 Q140 122 154 116" stroke="#A7908A" stroke-width="4" fill="none"/>
+          <rect x="300" y="16" width="240" height="130" rx="10" fill="#3B3130"/>
+          <ellipse cx="420" cy="81" rx="44" ry="54" fill="#E2B796"/>
+          <ellipse cx="398" cy="96" rx="12" ry="7" fill="#E0918A"/><ellipse cx="442" cy="96" rx="12" ry="7" fill="#E0918A"/>
+          <path d="M406 116 Q420 122 434 116" stroke="#B0444F" stroke-width="4" fill="none"/>
+          <text x="140" y="168" font-size="15" fill="var(--ink)">로그 그대로 본 모니터</text>
+          <text x="140" y="186" font-size="13" fill="var(--muted)">회색빛, 혈색 없어 보임</text>
+          <text x="420" y="168" font-size="15" fill="var(--ink)">LUT를 씌운 모니터</text>
+          <text x="420" y="186" font-size="13" fill="var(--muted)">최종 화면에 가까운 색</text>
+        </g>
+      </svg>
+      <figcaption>같은 얼굴, 같은 메이크업이에요. 모니터에 무엇을 씌웠는지만 달라요. <i class="v v-mine">해석</i></figcaption>
+    </figure>
+    <h4 style="margin:0;font-size:15px">분장팀이 알아 둘 것</h4>
+    <ul class="watch">
+      <li><b>로그 화면만 보고 블러셔·립을 더 올리면 안 돼요.</b> 색보정에서 채도가 올라가면 과해져요. 현장 모니터에 LUT가 걸려 있는지 먼저 물어보세요.</li>
+      <li><b>LUT는 최종 색의 '가이드'예요.</b> 실제 색보정은 후반에서 더 바뀔 수 있어요. 그래서 톤을 볼 때는 맨눈과 LUT 화면을 같이 보는 게 안전해요.</li>
+      <li><b>촬영팀에 이렇게 물어보면 통해요.</b> "지금 모니터 로그예요, 룩 걸린 거예요?" 이 한마디면 충분해요.</li>
+    </ul>
+  </article>
+</section>
+
+<section id="events">
+  <div class="ch-head"><span class="mono">06 · 업계 캘린더</span><h2>다음 주 킨텍스, 분장 박스 들고 갈 일</h2></div>
+  <p class="lead">가까운 일정부터 정리했어요. 확정된 것과 아직 발표 전인 것을 나눠 표시했어요.</p>
+  <ul class="events">
+    <li><div class="dt">10월<b>15–17</b>목–토</div><div>
+      <h3>K-뷰티엑스포 코리아 2026 <i class="v v-ok">공식 확인</i></h3>
+      <p>킨텍스 제1전시장 3~5홀, 10:00~17:00. 스킨케어, 메이크업·네일, 헤어, 바디 등 12개 분야예요.</p>
+      <p class="why">신생 브랜드 텍스처를 한 번에 테스트해 볼 기회예요. 업계 대상 전시라 일반 관람 조건은 공식 사이트에서 미리 확인하세요. <i class="v v-mine">해석</i></p>
+    </div></li>
+    <li><div class="dt">11월<b>미정</b>발표 전</div><div>
+      <h3>제47회 청룡영화상 <i class="v v-single">단일 출처</i></h3>
+      <p>올해 날짜는 아직 발표 전이에요. 작년(제46회)은 11월 19일에 열렸고, 장소는 여의도 KBS홀이에요.</p>
+      <p class="why">분장은 따로 상이 없고 '기술상' 후보로 오르는 경우가 있어요. 후보가 발표되면 분장이 포함됐는지 다음 호에서 짚어 드릴게요. <i class="v v-mine">해석</i></p>
+    </div></li>
+    <li><div class="dt">2027<b>3.12</b>금</div><div>
+      <h3>제60회 대종상영화제 <i class="v v-press">보도 확인</i></h3>
+      <p>멈췄던 대종상이 4년 만에 다시 열려요. 첫 시상식이 열렸던 11월 20일은 '대종의 날'로 정했어요.</p>
+      <p class="why">대종상은 기술 부문 시상이 따로 있는 편이라, 작년 개봉작 중 분장이 돋보인 작품이 후보에 오르는지 볼 만해요. <i class="v v-mine">해석</i></p>
+    </div></li>
+    <li><div class="dt">2027<b>5.19–21</b>수–금</div><div>
+      <h3>코스모뷰티서울 2027 <i class="v v-ok">공식 확인</i></h3>
+      <p>코엑스 1층 A홀·로비. 화장품·미용 산업 박람회예요. 아직 멀었지만 미리 달력에 넣어 두세요.</p>
+    </div></li>
+  </ul>
+</section>
+
 <section id="homework">
-  <div class="ch-head"><span class="mono">05 · 이번 주 숙제</span><h2>30분 숙제, 다음 촬영에서 바로 써먹기</h2></div>
+  <div class="ch-head"><span class="mono">07 · 이번 주 숙제</span><h2>30분 숙제, 다음 촬영에서 바로 써먹기</h2></div>
   <ul class="todo">
     <li><label for="n01-t1"><input type="checkbox" id="n01-t1"><span>부산행에서 감염 장면 하나를 골라 물림부터 변이까지 혈관이 번지는 방향을 메모</span><span class="min">10분</span></label></li>
     <li><label for="n01-t2"><input type="checkbox" id="n01-t2"><span>킹덤 시즌1에서 좀비 4명을 캡처해 피부톤을 계급 순으로 나열해 보기</span><span class="min">10분</span></label></li>
@@ -488,7 +565,7 @@ footer{margin-top:40px;font-size:13px;color:var(--muted);border-top:1px solid va
 </section>
 
 <section id="verify">
-  <div class="ch-head"><span class="mono">06 · 검증·출처</span><h2>이 정보, 어디까지 믿어도 될까</h2></div>
+  <div class="ch-head"><span class="mono">08 · 검증·출처</span><h2>이 정보, 어디까지 믿어도 될까</h2></div>
   <p>핵심 자료는 원문 페이지를 직접 열어 확인했어요. 두 곳 이상이 같은 내용이면 '보도 확인', 한 곳뿐이면 '단일 출처'로 표시했어요.</p>
   <div class="grid-table"><table>
     <thead><tr><th>내용</th><th>판정</th><th>근거</th></tr></thead>
@@ -502,6 +579,11 @@ footer{margin-top:40px;font-size:13px;color:var(--muted);border-top:1px solid va
       <tr><td>올영데이 10/25~27, 다음 대규모 올영세일 12월(날짜 미정)</td><td><i class="v v-single">단일 출처</i></td><td>블로그 정리글. 올영데이는 매달 25~27일 정기 행사</td></tr>
       <tr><td>다이소몰 환절기 행사 (작년 10/15~19)</td><td><i class="v v-single">단일 출처</i></td><td>파이낸셜신문 2025년 기사. 올해 일정은 미발표</td></tr>
       <tr><td>아모레몰 진행 중 이벤트 없음</td><td><i class="v v-ok">공식 확인</i></td><td>아모레몰 이벤트 페이지 직접 확인</td></tr>
+      <tr><td>K-뷰티엑스포 코리아 2026: 10/15~17 킨텍스, 12개 분야</td><td><i class="v v-ok">공식 확인</i></td><td>K-뷰티엑스포 공식 사이트</td></tr>
+      <tr><td>제47회 청룡영화상 날짜 미발표, 작년 11/19, KBS홀</td><td><i class="v v-single">단일 출처</i></td><td>나무위키, 작년 일정은 이데일리 기사 제목으로 대조</td></tr>
+      <tr><td>제60회 대종상 2027/3/12, 11/20 '대종의 날'</td><td><i class="v v-press">보도 확인</i></td><td>이데일리, 네이트 뉴스 기사 제목 일치</td></tr>
+      <tr><td>코스모뷰티서울 2027/5/19~21 코엑스</td><td><i class="v v-ok">공식 확인</i></td><td>코스모뷰티서울 공식 사이트</td></tr>
+      <tr><td>로그 촬영·LUT 설명</td><td><i class="v v-mine">해석</i></td><td>촬영 현장 일반 지식</td></tr>
       <tr><td>도해, 현장 적용 팁, 카메라 팁</td><td><i class="v v-mine">해석</i></td><td>공개 자료를 바탕으로 한 분석·예시</td></tr>
       <tr><td>10월 올리브영 신상 정보</td><td><i class="v v-ok">공식 확인</i></td><td>올리브영 공식몰. 풍년다방 에디션만 단일 출처</td></tr>
     </tbody>
@@ -518,6 +600,10 @@ footer{margin-top:40px;font-size:13px;color:var(--muted);border-top:1px solid va
     <li><a href="https://www.starnewskorea.com/business-life/2026/10/06/2026100609235635093" target="_blank" rel="noopener">스타뉴스: 쿠팡 '뷰티풀데이' 개최</a></li>
     <li><a href="https://www.efnews.co.kr/news/articleView.html?idxno=123975" target="_blank" rel="noopener">파이낸셜신문: 다이소몰 환절기 뷰티대전 (2025)</a></li>
     <li><a href="https://www.amoremall.com/kr/ko/display/nowEvent?displayMenuId=nowEvent" target="_blank" rel="noopener">아모레몰 이벤트</a></li>
+    <li><a href="https://k-beautyexpo.co.kr/fairContents.do?FAIRMENU_IDX=11762&amp;hl=KOR" target="_blank" rel="noopener">K-뷰티엑스포 코리아 행사개요</a></li>
+    <li><a href="https://namu.wiki/w/%EC%A0%9C47%ED%9A%8C%20%EC%B2%AD%EB%A3%A1%EC%98%81%ED%99%94%EC%83%81" target="_blank" rel="noopener">나무위키: 제47회 청룡영화상</a></li>
+    <li><a href="https://edaily.co.kr/News/Read?mediaCodeNo=257&amp;newsId=03660486645546992" target="_blank" rel="noopener">이데일리: 대종상영화제, 4년 만에 돌아온다</a></li>
+    <li><a href="https://www.cosmobeautyseoul.com/fairContents.do?FAIRMENU_IDX=659&amp;hl=KOR" target="_blank" rel="noopener">코스모뷰티서울 행사개요</a></li>
     <li><a href="https://corp.oliveyoung.com/ko/news" target="_blank" rel="noopener">올리브영 뉴스룸</a></li>
     <li><a href="https://m.oliveyoung.co.kr/m/mtn?menu=sale" target="_blank" rel="noopener">올리브영 세일관</a></li>
     <li><a href="https://techjeju.com/%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81-10%EC%9B%94-%EC%84%B8%EC%9D%BC-%EA%B8%B0%EA%B0%84%C2%B7%EB%82%A0%EC%A7%9C%EF%BD%9C%EC%BD%9C%EB%9D%BC%EB%B3%B4%C2%B7%EC%98%AC%EC%98%81%ED%94%BD%C2%B7%EB%B9%85/" target="_blank" rel="noopener">techjeju: 올리브영 10월 올영픽 정리</a></li>
@@ -526,7 +612,7 @@ footer{margin-top:40px;font-size:13px;color:var(--muted);border-top:1px solid va
 
 <!--ARCHIVE-->
 <section id="archive">
-  <div class="ch-head"><span class="mono">07 · 지난 호</span><h2>놓친 호 다시 꺼내 보기</h2></div>
+  <div class="ch-head"><span class="mono">09 · 지난 호</span><h2>놓친 호 다시 꺼내 보기</h2></div>
   <p>매주 새 호가 나오면 지난 호는 여기 그대로 쌓여요. 한 호가 사진 없이 글과 도해만으로 40KB 정도라, 몇 년치를 모아도 용량 걱정은 없어요.</p>
   <ul class="archive">
     <li><span class="cur"><span class="no">No.01</span><span>K-특수분장의 기준: 서울의 봄, 부산행, 킹덤</span><span class="d">10.05 · 지금 보는 호</span></span></li>
